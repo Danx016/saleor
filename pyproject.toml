@@ -87,7 +87,7 @@ Documentation = "https://docs.saleor.io/"
 [dependency-groups]
 dev = [
     "coverage~=7.14",
-    "deptry>=0.23.0,<0.24",
+    "deptry>=0.25.1,<0.26",
     "django-extensions~=4.1",
     # TODO: once on django-stubs >= 6.0.2, revert the PublishedQuerySet TypeVar
     # workaround in saleor/core/models.py back to bound="PublishableModel".
