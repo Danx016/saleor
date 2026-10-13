@@ -23,11 +23,12 @@ services:
   dashboard:
     image: ghcr.io/saleor/saleor-dashboard:latest
     ports:
-      - "9001:80"
+      - "8088:80"
     restart: unless-stopped
     networks:
       - saleor-network
     environment:
+      - API_URL=http://157.137.233.119:8000/graphql/
       - API_URI=http://157.137.233.119:8000/graphql/
 
   worker:
