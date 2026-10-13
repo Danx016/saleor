@@ -1,0 +1,19 @@
+services:
+  saleor-storefront:
+    container_name: saleor-storefront
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_SALEOR_API_URL: https://saleor.duckdns.org/graphql/
+        NEXT_PUBLIC_STOREFRONT_URL: https://saleor.duckdns.org
+        NEXT_PUBLIC_DEFAULT_CHANNEL: canal-colombia
+        NEXT_PUBLIC_DEFAULT_LOCALE: es
+    restart: always
+    ports:
+      - "3100:3000"
+    environment:
+      - NEXT_PUBLIC_SALEOR_API_URL=https://saleor.duckdns.org/graphql/
+      - NEXT_PUBLIC_STOREFRONT_URL=https://saleor.duckdns.org
+      - NEXT_PUBLIC_DEFAULT_CHANNEL=canal-colombia
+      - NEXT_PUBLIC_DEFAULT_LOCALE=es
