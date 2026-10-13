@@ -31,6 +31,7 @@ services:
       - API_URL=http://157.137.233.119:8000/graphql/
       - API_URI=http://157.137.233.119:8000/graphql/
       - LOCALE_CODE=ES
+      - APP_MOUNT_URI=/dashboard/
 
   worker:
     build:
